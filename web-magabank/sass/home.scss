@@ -157,7 +157,7 @@ h2.titulo-principal{
                 font-size: em(13);
                 color: #fff;
                 margin-top: 30px;
-                @include transition(0.3s all linear);
+                cursor: pointer;
 
                 &:hover{
                     background: linear-gradient(251.61deg, #029fff -24.74%,#01579a 73.02%);
