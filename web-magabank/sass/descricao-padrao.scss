@@ -1,0 +1,46 @@
+@import 'partials/base';
+
+body{
+    background: #fff;
+}
+
+.descricao-pagina{
+    color: #222;
+
+    h1{
+        font-size: em(22);
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .data-atualizacao{
+        font-size: em(14);
+        text-align: center;
+        margin: 5px 0 30px 0;
+    }
+
+    p{
+        margin-top: 20px;
+        font-size: em(14);
+    }
+
+    h2{
+        font-weight: bold;
+        font-size: em(14);
+        margin-top: 20px;
+    }
+    
+    ol{
+        margin-top: 20px;
+        padding-left: 50px;
+        
+        li{
+            margin-top: 20px;
+            font-size: 14px;
+            
+            ol{
+                margin-top: 0;
+            }
+        }
+    }
+}
