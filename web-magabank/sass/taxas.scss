@@ -1,10 +1,9 @@
 @import 'partials/base';
 
-.content {
+.conteudo-taxas {
     margin-bottom: 40px;
     margin-top: 100px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 40px;
     background-color: #fafafa;
 
     p{
@@ -12,9 +11,10 @@
         text-transform: uppercase;
         margin-top: 60px;
         margin-bottom: 20px;
+        font-weight: bold;
 
         &:first-child{
-            margin-top: 0px;    
+            margin-top: 0px;     
         }
     }
 
@@ -24,6 +24,11 @@
         margin-bottom: 20px;
         font-size: 18px;
         font-weight: 300;
+        
+        tr{
+            display: flex;
+            justify-content: space-between
+        }
 
         td{
             padding: 8px;
@@ -33,6 +38,7 @@
 
             &:last-child {
                 min-width: 86px;
+                font-weight: bold;
             }
         }
     }

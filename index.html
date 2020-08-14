@@ -55,23 +55,28 @@
 
                 <ul id="nav-root" class="flex center" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
                     <li>
-                        <meta itemprop="name" content="Fale conosco">
-                        <a href="https://www.magabank.com.br" target="_blank">
+                        <meta itemprop="name" content="Voltar para Magapay">
+                        <a href="https://www.magapay.com.br" target="_blank">
                             Voltar para Magapay
                         </a>
                     </li>
                     <li>
-                        <meta itemprop="name" content="Dúvidas frequentes">
-                        <a href="">
-                            Dúvidas frequentes
+                        <meta itemprop="name" content="Termos de privacidade">
+                        <a href="termo-de-privacidade.html">
+                            Política de privacidade
                         </a>
                     </li>
                     <li>
-                        <meta itemprop="name" content="Fale conosco">
-                        <a href="">
-                            Fale conosco
+                        <meta itemprop="name" content="Termos de serviço">
+                        <a href="termo-de-servico.html">
+                            Termos de serviço
                         </a>
-
+                    </li>
+                    <li>
+                        <meta itemprop="name" content="Taxas">
+                        <a href="taxas.html">
+                            Taxas
+                        </a>
                     </li>
                     <li class="menu-destaque">
                         <meta itemprop="name" content="Baixar o Aplicativo">
@@ -199,7 +204,7 @@
                 <p>
                     Em um futuro bem próximo, estaremos disponíveis na palma de sua mão, dentro da sua loja de aplicativos. Quer saber quando vamos estrear? Insira seu email abaixo e você será o primeiro a saber.
                 </p>
-                <a href="" class="fale-conosco">
+                <a onclick="sendMsgWhats('Estou interessado no Magabank')" class="fale-conosco">
                     Fale conosco
                 </a>
             </div>
@@ -259,18 +264,23 @@
 
                         <ul id="menu-footer" class="content">
                             <li>
-                                <a href="#vantagens">
+                                <a href="https://www.magapay.com.br" target="_blank" rel="nofollow">
                                     Voltar para Magapay
                                 </a>
                             </li>
                             <li>
-                                <a href="#calculadora">
-                                    Dúvidas frequentes
+                                <a href="termo-de-privacidade.html">
+                                    Política de privacidade
                                 </a>
                             </li>
                             <li>
-                                <a href="#duvidas">
-                                    Fale conosco
+                                <a href="termo-de-servico.html">
+                                    Termos de serviço
+                                </a>
+                            </li>
+                            <li>
+                                <a href="taxas.html">
+                                    Taxas
                                 </a>
                             </li>
                             <li>
@@ -299,7 +309,7 @@
                                         (47) 3520-8058
                                     </div>
                                 </a>
-                                <a onclick="sendMsgWhats('Quais as taxas? E aluguel?')" class="flex center">
+                                <a onclick="sendMsgWhats('Estou interessado no Magabank')" class="flex center">
                                     <div class="icon">
                                         <img src="web-magabank/image/footer/icon-whatsapp.svg" alt="Whatsapp" title="Whatsapp" draggable="false"/>
                                     </div>
@@ -307,12 +317,12 @@
                                         (47) 3520-8058
                                     </div>
                                 </a>
-                                <a href="mailto:magabank@magamobi.com.br" class="flex center">
+                                <a href="mailto:contato@magabank.com.br" class="flex center">
                                     <div class="icon">
                                         <img src="web-magabank/image/footer/icon-email.svg" alt="E-mail" title="E-mail" draggable="false"/>
                                     </div>
                                     <div class="text">
-                                        magabank@magamobi.com.br
+                                        contato@magabank.com.br
                                     </div>
                                 </a>
                             </li>
@@ -344,6 +354,29 @@
                 </div>
             </div>
         </footer>
+
+        <script language=javascript type="text/javascript">
+            function sendMsgWhats(mensagem) {
+                var w = 900;
+                var h = 500;
+
+                var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : window.screenX;
+                var dualScreenTop = window.screenTop != undefined ? window.screenTop : window.screenY;
+
+                var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+                var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+                var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+                var top = ((height / 2) - (h / 2)) + dualScreenTop;
+
+                var newWindow = window.open('https://api.whatsapp.com/send?phone=554735208058&text=' + mensagem, 'scrollbars=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+                // Puts focus on the newWindow
+                if (window.focus) {
+                    newWindow.focus();
+                }
+            }
+        </script>
     </body>
 
 </html>

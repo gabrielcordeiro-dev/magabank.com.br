@@ -1,7 +1,47 @@
 @import 'partials/base';
 
 body{
-    background: #fff;
+    background: #efefef;
+
+    header{
+        margin-top: 0;
+        padding: 20px 0;
+        border-bottom: 1px solid $cor-bordas;
+        background: #fff;
+
+        ul#nav-root > li {
+            &.menu-destaque>a{
+                border-color: $cor-base;
+                color: $cor-base;
+                
+                &:hover{
+                    background: $cor-base;
+                    color: #fff;
+                }
+            }    
+
+            > a{
+                color: $cor-base;
+            }   
+        }
+    }
+
+    footer{
+        border-top: 1px solid $cor-bordas;
+        background: #fff;
+        padding-top: 40px;
+        margin-top: 50px;
+
+        .footer-middle p,
+        h4.section-title,
+        .conteudo-footer-middle a{
+            color: $cor-texto;
+        }
+
+        .atendimento .icon {
+            filter: brightness(0.5);
+        }
+    }
 }
 
 .descricao-pagina{
@@ -29,21 +69,21 @@ body{
         font-size: em(14);
         margin-top: 20px;
     }
-    
+
     ol, ul{
         margin-top: 20px;
         padding-left: 50px;
-        
+
         li{
             margin-top: 20px;
             font-size: 14px;
-            
+
             ol{
                 margin-top: 0;
             }
         }
     }
-    
+
     ul li{
         list-style-type: disc;
         margin-top: 5px;

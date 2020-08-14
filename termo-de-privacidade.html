@@ -46,6 +46,49 @@
     </head>
 
     <body>
+        <header>
+            <div class="container flex center">
+                <h1 title="Magabank">
+                    <a href="/">
+                        <img src="web-magabank/image/header/logo-colorida.svg" alt="Magabank" title="Magabank" draggable="false"/>
+                    </a>
+                </h1>
+
+                <ul id="nav-root" class="flex center" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                    <li>
+                        <meta itemprop="name" content="Voltar para Magapay">
+                        <a href="https://www.magapay.com.br" target="_blank">
+                            Voltar para Magapay
+                        </a>
+                    </li>
+                    <li>
+                        <meta itemprop="name" content="Termos de privacidade">
+                        <a href="termo-de-privacidade.html">
+                            Política de privacidade
+                        </a>
+                    </li>
+                    <li>
+                        <meta itemprop="name" content="Termos de serviço">
+                        <a href="termo-de-servico.html">
+                            Termos de serviço
+                        </a>
+                    </li>
+                    <li>
+                        <meta itemprop="name" content="Taxas">
+                        <a href="taxas.html">
+                            Taxas
+                        </a>
+                    </li>
+                    <li class="menu-destaque">
+                        <meta itemprop="name" content="Baixar o Aplicativo">
+                        <a href="" target="_blank" rel="nofollow">
+                            Baixar o Aplicativo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
         <div class="container descricao-pagina">
             <h1>
                 Política de Privacidade da MagaBank
@@ -284,11 +327,157 @@
                     <strong>9.9</strong> Na medida permitida pela lei, todas as reclamações decorrentes de ou relacionadas com estes termos ou Serviços deverão ser tratadas exclusivamente no foro da comarca de [Rio do Sul, Santa Catarina], Brasil e você e a MagaBank autorizam a jurisdição pessoal nesses tribunais.
                 </li>
             </ol>
-            
+
             <p style="font-style: italic">
                 Para obter informações sobre como entrar em contato com a MagaBank, por favor acesse o nosso website: magabank.com.br ou Canais de Atendimento.
             </p>
         </div>
+
+        <footer itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop="name" content="Magapay"/>
+            <meta itemprop="url" content="/"/>
+            <div class="container footer-middle flex space-between">
+                <div class="dados-loja">
+                    <a href="/">
+                        <img src="web-magabank/image/header/logo-colorida.svg" alt="Magabank" title="Magabank" draggable="false"/>
+                    </a>
+
+                    <div class="horario-atendimento">
+                        <h4 class="section-title">
+                            Horário de atendimento
+                        </h4>
+                        <p>
+                            De segunda a sexta, das 08:00h às 18:00h.
+                        </p>
+                    </div>
+                    <p>
+                        Estrada da Madeira, 1875 - Barragem, Rio do Sul - SC - CEP: 89165-063
+                    </p>
+                </div>
+
+                <div class="conteudo-footer-middle flex space-between">
+                    <div class="links-uteis accordion">
+                        <h4 class="section-title">
+                            <span>Links úteis</span>
+                            <a href="#" class="arrow-ctn prevent-default">
+                                <span class="arrow-down"></span>
+                            </a>
+                        </h4>
+
+                        <ul id="menu-footer" class="content">
+                            <li>
+                                <a href="https://www.magapay.com.br" target="_blank" rel="nofollow">
+                                    Voltar para Magapay
+                                </a>
+                            </li>
+                            <li>
+                                <a href="termo-de-privacidade.html">
+                                    Política de privacidade
+                                </a>
+                            </li>
+                            <li>
+                                <a href="termo-de-servico.html">
+                                    Termos de serviço
+                                </a>
+                            </li>
+                            <li>
+                                <a href="taxas.html">
+                                    Taxas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://api.magabank.com.br/docs"  target="_blank">
+                                    Baixar aplicativo
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="atendimento accordion">
+                        <h4 class="section-title">
+                            <span>Atendimento</span>
+                            <a href="#" class="arrow-ctn prevent-default">
+                                <span class="arrow-down"></span>
+                            </a>
+                        </h4>
+
+                        <ul id="nav-contact" class="content">
+                            <li>
+                                <a href="tel:+554735208058" class="flex center">
+                                    <div class="icon">
+                                        <img src="web-magabank/image/footer/icon-telefone.svg" alt="Telefone" title="Telefone" draggable="false"/>
+                                    </div>
+                                    <div class="text">
+                                        (47) 3520-8058
+                                    </div>
+                                </a>
+                                <a onclick="sendMsgWhats('Estou interessado no Magabank')" class="flex center">
+                                    <div class="icon">
+                                        <img src="web-magabank/image/footer/icon-whatsapp.svg" alt="Whatsapp" title="Whatsapp" draggable="false"/>
+                                    </div>
+                                    <div class="text">
+                                        (47) 3520-8058
+                                    </div>
+                                </a>
+                                <a href="mailto:contato@magabank.com.br" class="flex center">
+                                    <div class="icon">
+                                        <img src="web-magabank/image/footer/icon-email.svg" alt="E-mail" title="E-mail" draggable="false"/>
+                                    </div>
+                                    <div class="text">
+                                        contato@magabank.com.br
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Estrada da Madeira, 1875, bairro Barragem"/> 
+                <meta itemprop="postalCode" content="891650-063">
+                <meta itemprop="addressLocality" content="Rio do Sul"/> 
+                <meta itemprop="addressRegion" content="Santa Catarina"/>
+                <meta itemprop="addressCountry" content="Brasil"/>
+                <meta itemprop="telephone" content="(47)3520-8058"/>
+
+                <div class="container">
+                    <div class="flex center space-around">
+                        <div class="dados-loja">
+                            MAGAMOBI PAGAMENTOS ELETRONICOS LTDA - 29.247.605/0001-63 &copy; Todos os direitos reservados.
+                        </div>
+
+                        <div class="empresa-grupo">
+                            <a href="http://www.magamobi.com.br/" target="_blank">
+                                <img src="web-magabank/image/footer/logo-magamobi.svg" alt="Uma empresa do grupo Magamobi" title="Uma empresa do grupo Magamobi" draggable="false"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script language=javascript type="text/javascript">
+            function sendMsgWhats(mensagem) {
+                var w = 900;
+                var h = 500;
+
+                var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : window.screenX;
+                var dualScreenTop = window.screenTop != undefined ? window.screenTop : window.screenY;
+
+                var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+                var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+                var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+                var top = ((height / 2) - (h / 2)) + dualScreenTop;
+
+                var newWindow = window.open('https://api.whatsapp.com/send?phone=554735208058&text=' + mensagem, 'scrollbars=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+                // Puts focus on the newWindow
+                if (window.focus) {
+                    newWindow.focus();
+                }
+            }
+        </script>
     </body>
 
 </html>
