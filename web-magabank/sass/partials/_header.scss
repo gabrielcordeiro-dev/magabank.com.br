@@ -1,1 +1,53 @@
 @import 'partials/base';
+
+header{
+    margin-top: 46px;
+
+    a.logo{
+        display: flex;
+    }
+
+    ul#nav-root{
+        position: relative;
+        width: 100%; 
+        margin-left: 25px;
+
+        > li{
+            padding: 0 20px;
+
+            &:hover{
+                > a{
+                    border-bottom: 1px solid #fff;
+                }   
+
+                .container-menu{
+                    display: flex;
+                }
+            }
+
+            &.menu-destaque{
+                margin-left: auto;
+
+                > a{
+                    font-weight: bold;
+                    padding: 17px 28px; 
+                    border: 1px solid #fff;
+                    border-radius: 6px;
+
+                    &:hover{
+                        background: #fff;
+                        text-decoration: none;
+                        color: $cor-base;
+                    }
+                }
+            }
+
+            > a{
+                display: flex;
+                align-items: center;
+                color: #fff;
+                font-size: em(14);   
+            }
+        }
+    }
+}

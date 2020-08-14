@@ -1,1 +1,251 @@
 @import 'partials/base';
+
+body{
+    background: url('../image/home/background-home.svg')top center no-repeat;
+    background-color: #0D181D;
+}
+
+h2.titulo-principal{
+    font-weight: bold;
+    font-size: em(48);
+    text-align: center;
+    color: #fff;
+    line-height: 126.19%;
+    padding: 0 250px;
+    margin-top: 108px;
+
+    span{
+        color: $cor-terciaria;
+    }
+}
+
+.icon-union{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.app-magabank{
+    justify-content: flex-end;    
+    z-index: 99;
+
+    .app-conteudo{
+        width: 365px;
+        margin-right: 56px;
+
+        &.descricao-padrao p{
+            color: #fff;
+        }
+    }
+
+    h3{
+        color: #fff;
+    }
+}
+
+.descricao-padrao p{
+    font-size: em(13);
+    line-height: 126.19%;
+    color: $cor-texto;
+    margin-top: 20px;
+}
+
+.diferenciais-magabank{ 
+    display: flow-root;
+    position: relative;
+    margin-top: -533px;
+    z-index: -1;
+    background: url(../image/home/background-branco.svg)center center no-repeat;
+
+    .diferenciais-conteudo{
+        margin-top: 640px;
+
+        &.container:after{
+            display: none
+        }
+
+        .conta-digital{
+            width: 419px;
+        }
+
+        .sem-anuidade{
+            width: 348px;
+        }
+    }
+
+    .sem-taxas{
+        background: #1C262A;
+        @include box-shadow(0px 14px 24px rgba(0, 0, 0, 0.11));
+        border-radius: 14px;
+        margin-top: 90px;
+
+        .sem-taxas-image{
+            width: 640px;
+        }
+
+        .sem-taxas-conteudo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 600px;
+
+            .descricao-padrao{
+                width: 350px;
+
+                h3{
+                    color: #fff;
+                }
+
+                p{
+                    color: #fff;
+                }
+            }
+
+            ul.lista-beneficios{
+                margin-top: 30px;
+
+                li{
+                    font-size: em(13);
+                    color: #fff;
+                    margin-top: 10px;
+
+                    .icon-beneficio{
+                        margin-right: 10px; 
+                    }
+                }
+            }
+        }
+    }
+} 
+
+.crie-sua-conta{
+    margin-top: 90px;
+
+    &:after{
+        display: none;
+    }
+
+    .crie-sua-conta-conteudo{
+        width: 551px;
+
+        &.descricao-padrao{
+            h4{
+                font-weight: bold;
+                font-size: 64px;
+                line-height: 126.19%;
+                color: #fff;
+
+                span{
+                    color: $cor-terciaria;
+                }
+            }
+
+            p{
+                color: #fff;
+            }
+
+            a.fale-conosco{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 197.8px;
+                height: 50px;
+                background: linear-gradient(251.61deg, #2FABF7 -24.74%, #007EE0 73.02%);
+                border: 1px solid #2FABF7;
+                box-sizing: border-box;
+                border-radius: 6px;
+                font-size: em(13);
+                color: #fff;
+                margin-top: 30px;
+                @include transition(0.3s all linear);
+
+                &:hover{
+                    background: linear-gradient(251.61deg, #029fff -24.74%,#01579a 73.02%);
+                }
+            }
+        }
+    }
+
+    .crie-sua-conta-image{
+        width: 441px   
+    }
+}
+
+
+.oferta-maquininha{
+    background: #1C262A;
+    @include box-shadow(0px 9px 34px rgba(0, 0, 0, 0.09));
+    border-radius: 11px;
+    margin-top: 28px;
+
+    @include breakpoint($break-medium){
+        flex-direction: column; 
+        margin-top: 50px;
+        @include box-shadow(none);
+        border-top: 1px solid $cor-bordas;
+        border-bottom: 1px solid $cor-bordas;
+        padding: 20px 10px;
+        text-align: center;
+        border-radius: 0;
+    }
+
+    .image-maquininha{
+        @include breakpoint($break-medium){
+            display: none;
+        }
+    }
+
+    .conteudo-maquininha{
+        width: 350px;
+        margin-left: 60px; 
+
+        @include breakpoint($break-medium){
+            width: 100%;
+            margin-left: 0;
+        }
+
+        h2{
+            font-size: em(24);
+            font-weight: bold;
+            color: #fff;
+
+            span{
+                color: $cor-terciaria;
+            }
+        }
+        
+        p{
+            font-size: em(13);
+            color: #fff;
+            line-height: 16px;
+            margin-top: 5px;
+        }
+    }
+
+    a.button-conheca-maquininha{
+        display: flex;
+        align-items: center;
+        padding: 17px 28px;
+        border-radius: 6px;
+        color: #fff;
+        font-size: em(13);
+        font-weight: bold;
+        margin-left: 125px;
+        border: 1px solid #fff;
+
+        @include breakpoint($break-medium){
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        &:hover{
+            background: $cor-terciaria;
+            border-color: $cor-terciaria;
+        }
+
+        .btn-icon{
+            @include seta(8px, #fff, 'right');
+            margin-left: 10px;
+        }
+    }
+}

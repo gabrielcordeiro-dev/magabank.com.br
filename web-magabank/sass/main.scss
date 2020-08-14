@@ -103,3 +103,18 @@ strong{
 .direction-row{
     flex-direction: row;
 }
+
+
+.title-padrao{
+    h3{
+        font-style: normal;
+        font-weight: bold;
+        font-size: em(33);
+        line-height: 126.19%;
+        margin-top: 10px;
+        
+        span{
+            color: $cor-terciaria;
+        }
+    }
+}
