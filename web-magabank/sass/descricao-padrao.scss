@@ -30,7 +30,7 @@ body{
         margin-top: 20px;
     }
     
-    ol{
+    ol, ul{
         margin-top: 20px;
         padding-left: 50px;
         
@@ -42,5 +42,10 @@ body{
                 margin-top: 0;
             }
         }
+    }
+    
+    ul li{
+        list-style-type: disc;
+        margin-top: 5px;
     }
 }
