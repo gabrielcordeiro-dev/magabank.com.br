@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
     <head>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175449500-1"></script>
@@ -46,54 +45,97 @@
     </head>
 
     <body>
+        <header>
+            <div class="container flex center">
+                <h1 title="Magabank">
+                    <a href="/">
+                        <img src="web-magabank/image/header/logo.svg" alt="Magabank" title="Magabank" draggable="false"/>
+                    </a>
+                </h1>
+
+                <ul id="nav-root" class="flex center" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                    <li>
+                        <meta itemprop="name" content="Voltar para Magapay">
+                        <a href="https://www.magapay.com.br" target="_blank" rel="nofollow noopener">
+                            Voltar para Magapay
+                        </a>
+                    </li>
+                    <li>
+                        <meta itemprop="name" content="Termos de privacidade">
+                        <a href="termo-de-privacidade.html">
+                            Política de privacidade
+                        </a>
+                    </li>
+                    <li>
+                        <meta itemprop="name" content="Termos de serviço">
+                        <a href="termo-de-servico.html">
+                            Termos de serviço
+                        </a>
+                    </li>
+                    <li>
+                        <meta itemprop="name" content="Taxas">
+                        <a href="taxas.html">
+                            Taxas
+                        </a>
+                    </li>
+                    <li class="menu-destaque">
+                        <meta itemprop="name" content="Baixar o Aplicativo">
+                        <a href="https://apps.apple.com/br/app/magabank/id1525904425" target="_blank" rel="nofollow noopener">
+                            Baixar o Aplicativo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        
         <script type="text/javascript">
-        function getQueryStringValue(key) {
-            return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
-        }
+            function getQueryStringValue(key) {
+                return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
+            }
 
-        function getOperatingSystem() {
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            function getOperatingSystem() {
+                var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-            if (/windows phone/i.test(userAgent)) {
+                if (/windows phone/i.test(userAgent)) {
+                    return null;
+                }
+
+                if (/android/i.test(userAgent)) {
+                    return "Android";
+                }
+
+                if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                    return "iOS";
+                }
+
                 return null;
             }
+            ;
 
-            if (/android/i.test(userAgent)) {
-                return "Android";
+            function showError() {
+                $('.prompt').addClass('hidden');
+                $('.prompt.result').removeClass('hidden');
             }
 
-            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                return "iOS";
-            }
+            document.addEventListener("DOMContentLoaded", function (event) {
+                if (getOperatingSystem()) {
+                    var identifier = getQueryStringValue("transfer");
 
-            return null;
-        }
-        ;
+                    if (/[0-9]{16}/.test(identifier)) {
+                        var urlScheme = "magabank://transfer?i=" + identifier;
 
-        function showError() {
-            $('.prompt').addClass('hidden');
-            $('.prompt.result').removeClass('hidden');
-        }
-
-        document.addEventListener("DOMContentLoaded", function (event) {
-            if (getOperatingSystem()) {
-                var identifier = getQueryStringValue("transfer");
-
-                if (/[0-9]{16}/.test(identifier)) {
-                    var urlScheme = "magabank://transfer?i=" + identifier;
-
-                    var button = document.querySelector('.call-to-action');
-                    button.setAttribute('href', urlScheme);
-                    button.click();
+                        var button = document.querySelector('.call-to-action');
+                        button.setAttribute('href', urlScheme);
+                        button.click();
+                    } else {
+                        showError();
+                    }
                 } else {
                     showError();
                 }
-            } else {
-                showError();
-            }
-        });
+            });
         </script>
-        
+
         <footer itemscope itemtype="http://schema.org/Organization">
             <meta itemprop="name" content="Magapay"/>
             <meta itemprop="url" content="/"/>
@@ -124,7 +166,7 @@
 
                         <ul id="menu-footer" class="content">
                             <li>
-                                <a href="https://www.magapay.com.br" target="_blank" rel="nofollow">
+                                <a href="https://www.magapay.com.br" target="_blank" rel="nofollow noopener">
                                     Voltar para Magapay
                                 </a>
                             </li>
@@ -144,7 +186,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://api.magabank.com.br/docs"  target="_blank">
+                                <a href="https://apps.apple.com/br/app/magabank/id1525904425" rel="nofollow noopener" target="_blank">
                                     Baixar aplicativo
                                 </a>
                             </li>
