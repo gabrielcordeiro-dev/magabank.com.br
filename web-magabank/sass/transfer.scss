@@ -1,0 +1,73 @@
+@import 'partials/base';
+.prompt-container {
+    height: 50vh;
+    position: relative;
+}
+
+.prompt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    max-width: 500px;
+    background-color: #fafafa;
+    margin-top: -25px;
+}
+
+.prompt-body {
+    padding: 40px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+
+    h4 {
+        line-height: 26px;
+        font-size: 22px;
+        font-weight: 300;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+.prompt-actions {
+    border-top: 1px solid #d7d7d7;
+}
+
+.prompt-actions button,
+.prompt-actions a,
+.prompt.result a {
+    width: 50%;
+    background-color: transparent;
+    color: $cor-base !important;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.prompt-actions button:hover {
+    color: $cor-base-darken;
+}
+
+.prompt-actions button:active {
+    color: #199a80;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.prompt-actions button:first-child,
+.prompt-actions a:first-child {
+    border-right: 1px solid #d7d7d7;
+}
+
+.prompt.result h4 {
+    margin-bottom: 40px;
+}
+
+.prompt.result a {
+    width: auto;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
