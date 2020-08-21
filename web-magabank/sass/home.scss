@@ -14,6 +14,12 @@ h2.titulo-principal{
     padding: 0 250px;
     margin-top: 108px;
 
+    @include breakpoint($break-medium){ 
+        padding: 0 10px;
+        font-size: em(25);
+        margin-top: 50px;
+    }
+
     span{
         color: $cor-terciaria;
     }
@@ -23,15 +29,31 @@ h2.titulo-principal{
     display: flex;
     justify-content: center;
     margin-top: 35px;
+
+    @include breakpoint($break-medium){
+        width: 20px;
+        margin: 0 auto;
+        margin-top: 15px; 
+    }
 }
 
 .app-magabank{
     justify-content: flex-end;    
     z-index: 99;
 
+    @include breakpoint($break-medium){
+        flex-direction: column;
+    }
+
     .app-conteudo{
         width: 365px;
         margin-right: 56px;
+
+        @include breakpoint($break-medium){
+            width: 100%;
+            margin: 50px 0 30px 0;
+            padding: 0 10px;
+        }
 
         &.descricao-padrao p{
             color: #fff;
@@ -48,6 +70,12 @@ h2.titulo-principal{
     line-height: 126.19%;
     color: $cor-texto;
     margin-top: 20px;
+
+    @include breakpoint($break-medium){
+        text-align: center; 
+        font-size: em(15);
+        line-height: 29px;
+    }
 }
 
 .diferenciais-magabank{ 
@@ -57,8 +85,19 @@ h2.titulo-principal{
     z-index: -1;
     background: url(../image/home/background-branco.svg)center center no-repeat;
 
+    @include breakpoint($break-medium){
+        margin-top: -170px;
+        background: #fff;
+    }
+
     .diferenciais-conteudo{
         margin-top: 640px;
+
+        @include breakpoint($break-medium){
+            flex-direction: column;
+            margin-top: 210px;
+            padding: 0 10px;
+        }
 
         &.container:after{
             display: none
@@ -71,6 +110,13 @@ h2.titulo-principal{
         .sem-anuidade{
             width: 348px;
         }
+
+        .diferencial-item{
+            @include breakpoint($break-medium){
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        } 
     }
 
     .sem-taxas{
@@ -79,8 +125,18 @@ h2.titulo-principal{
         border-radius: 14px;
         margin-top: 90px;
 
+        @include breakpoint($break-medium){
+            margin-top: 30px;
+            border-radius: 0;
+            padding: 50px 9px;
+        }
+
         .sem-taxas-image{
             width: 640px;
+
+            @include breakpoint($break-medium){
+                display: none;
+            }
         }
 
         .sem-taxas-conteudo{
@@ -88,6 +144,10 @@ h2.titulo-principal{
             justify-content: center;
             align-items: center;
             width: 600px;
+
+            @include breakpoint($break-medium){
+                width: 100%;
+            }
 
             .descricao-padrao{
                 width: 350px;
@@ -121,6 +181,11 @@ h2.titulo-principal{
 .crie-sua-conta{
     margin-top: 90px;
 
+    @include breakpoint($break-medium){
+        margin-top: 0;
+        padding: 50px 0;
+    }
+
     &:after{
         display: none;
     }
@@ -128,12 +193,22 @@ h2.titulo-principal{
     .crie-sua-conta-conteudo{
         width: 551px;
 
+        @include breakpoint($break-medium){
+            width: 100%;
+            padding: 0 10px;
+        }
+
         &.descricao-padrao{
             h4{
                 font-weight: bold;
-                font-size: 64px;
+                font-size: em(64);
                 line-height: 126.19%;
                 color: #fff;
+
+                @include breakpoint($break-medium){
+                    font-size: em(25);
+                    text-align: center;
+                }
 
                 span{
                     color: $cor-terciaria;
@@ -159,6 +234,11 @@ h2.titulo-principal{
                 margin-top: 30px;
                 cursor: pointer;
 
+                @include breakpoint($break-medium){
+                    margin: 0 auto;
+                    margin-top: 30px;
+                }
+
                 &:hover{
                     background: linear-gradient(251.61deg, #029fff -24.74%,#01579a 73.02%);
                 }
@@ -167,7 +247,11 @@ h2.titulo-principal{
     }
 
     .crie-sua-conta-image{
-        width: 441px   
+        width: 441px;
+
+        @include breakpoint($break-medium){
+            display: none;
+        }
     }
 }
 
@@ -180,7 +264,7 @@ h2.titulo-principal{
 
     @include breakpoint($break-medium){
         flex-direction: column; 
-        margin-top: 50px;
+        margin-top: 0;
         @include box-shadow(none);
         border-top: 1px solid $cor-bordas;
         border-bottom: 1px solid $cor-bordas;
@@ -213,7 +297,7 @@ h2.titulo-principal{
                 color: $cor-terciaria;
             }
         }
-        
+
         p{
             font-size: em(13);
             color: #fff;

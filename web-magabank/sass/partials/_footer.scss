@@ -14,8 +14,6 @@ footer{
         }
 
         .footer-middle{
-            border-bottom: 1px solid $cor-bordas;
-
             .dados-loja{
                 text-align: center;
                 padding-bottom: 30px;
@@ -27,8 +25,13 @@ footer{
             }
         }
 
-        .footer-bottom .dados-loja{
-            text-align: center;
+        .footer-bottom {
+            margin-top: 0;
+            padding: 20px 0; 
+            
+            .dados-loja{
+                text-align: center;
+            }
         }
 
         .accordion {
@@ -42,35 +45,9 @@ footer{
                 font-size: em(16);
                 margin: 0;
                 padding: 10px;
-                background: #fff;
-                border-top: 1px solid $cor-bordas;
 
                 &:after,
                     &:before {
-                    display: none;
-                }
-
-                .arrow-ctn {
-                    .arrow-down {
-                        display: block;
-                        @include seta(8px, $cor-base, "bottom");
-                    }
-                    .arrow-up {
-                        display: block;
-                        @include seta(8px, $cor-base, "top");
-                    }
-                }
-            }
-
-
-            &.open {
-                h2.bg-title {
-                    border-bottom: 1px solid $cor-bordas;
-                }
-            }
-
-            &.closed {
-                .content {
                     display: none;
                 }
             }
