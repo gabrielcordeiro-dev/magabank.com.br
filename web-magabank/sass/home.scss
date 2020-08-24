@@ -303,6 +303,11 @@ h2.titulo-principal{
             color: #fff;
             line-height: 16px;
             margin-top: 5px;
+            
+            @include breakpoint($break-medium){
+                font-size: em(15);
+                line-height: 22px;
+            }
         }
     }
 
